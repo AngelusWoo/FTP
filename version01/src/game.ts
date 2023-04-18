@@ -2,34 +2,14 @@ import * as Phaser from 'phaser';
 
 export default class Demo extends Phaser.Scene
 {
-    constructor ()
-    {
-        super('demo');
-    }
+    constructor () { super('demo'); }
 
-    preload ()
-    {
+    preload () {
         this.load.image('logo', 'assets/phaser3-logo.png');
     }
 
-    create ()
-    {
-        this.add.shader('RGB Shift Field', 0, 0, 800, 600).setOrigin(0);
-
-        this.add.shader('Plasma', 0, 412, 800, 172).setOrigin(0);
-
-        this.add.image(400, 300, 'libs');
-
+    create () {
         const logo = this.add.image(400, 70, 'logo');
-
-        this.tweens.add({
-            targets: logo,
-            y: 350,
-            duration: 1500,
-            ease: 'Sine.inOut',
-            yoyo: true,
-            repeat: -1
-        })
     }
 }
 

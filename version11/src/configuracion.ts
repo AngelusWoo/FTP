@@ -1,5 +1,5 @@
-import Nivel1 from "./escenas/nivel1";
-
+import * as Phaser from 'phaser';
+import Nivel1 from './escenas/nivel1';
 const Configuracion = {
     type: Phaser.AUTO,
     backgroundColor: '#125555',

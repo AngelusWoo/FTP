@@ -1,3 +1,4 @@
+import * as Phaser from 'phaser';
 import Nivel1 from "./escenas/nivel1";
 
 const Configuracion = {

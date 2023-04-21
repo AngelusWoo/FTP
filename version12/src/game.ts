@@ -8,5 +8,5 @@ export class Juego extends Phaser.Game {
 }
 
 window.addEventListener('load', ()=>{
-    const game = new Juego(Configuracion);
+    const juego = new Juego(Configuracion);
 });

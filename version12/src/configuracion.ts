@@ -1,6 +1,6 @@
 import * as Phaser from 'phaser';
-import Carga from './escenas/carga';
 import Nivel1 from "./escenas/nivel1";
+import Carga from './escenas/carga';
 
 const Configuracion = {
     type: Phaser.AUTO,

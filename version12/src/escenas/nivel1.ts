@@ -4,7 +4,7 @@ export default class Nivel1 extends Phaser.Scene
     constructor () { super('Nivel1'); }
 
     preload () {
-        //this.load.image('logo', 'assets/phaser3-logo.png');
+        //this.load.image('logo', './assets/phaser3-logo.png');
     }
 
     create () {

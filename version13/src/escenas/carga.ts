@@ -4,9 +4,7 @@ export default class Carga extends Phaser.Scene {
     private barraCarga : Phaser.GameObjects.Graphics;
     private barraProgreso : Phaser.GameObjects.Graphics;
 
-    constructor() {
-        super('Carga');
-    }
+    constructor() { super('Carga'); }
 
     preload() : void {
         this.cameras.main.setBackgroundColor(0x000000);

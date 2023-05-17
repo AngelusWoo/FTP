@@ -10,6 +10,7 @@ export default class Nivel1 extends Phaser.Scene
     init(){
         this.width = this.cameras.main.width;
         this.height = this.cameras.main.height;
+        this.vidas = 3;
     }
 
     preload () {}

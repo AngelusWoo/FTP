@@ -8,12 +8,18 @@ export default class HUD extends Phaser.Scene {
 
     constructor() { super('HUD'); }
 
+    init(){
+        this.width = this.cameras.main.width;
+        this.height = this.cameras.main.height;
+    }
+
     create(): void{
         const nivel1: Phaser.Scene = this.scene.get('Nivel1');
         nivel1.events.on('cambiarvidas', this.actualizaVidas, this);
+        nivel1.events.on('cambiarPuntuacion', this.actualizaPuntuacion, this);
 
         this.vidasTxt = this.add.text(20,20, 'Vidas:3', {fontSize:'32px', color:'#FFFFFF'});
-        this.puntuacionTxt = this.add.text(this.width - 50, 20, '000', {fontSize:'32px', color:'#FFFFFF'});
+        this.puntuacionTxt = this.add.text(this.width - 50, 20, '000', {fontSize:'20px', color:'#FFFFFF'});
 
     }
 

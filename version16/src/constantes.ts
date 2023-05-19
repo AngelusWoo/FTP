@@ -46,6 +46,9 @@ const Constantes = {
     }, 
     OBJETOS:{
         FINAL: 'final'
+    },
+    BASEDATOS: {
+        NOMBRE: 'SUPERRANINJAv10'
     }
 };
 export default Constantes;

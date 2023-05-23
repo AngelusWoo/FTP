@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="VSCProjects">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/phaser3-typescript-project-template-master.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Pixel Adventure 1.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Pixel Adventure 2.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

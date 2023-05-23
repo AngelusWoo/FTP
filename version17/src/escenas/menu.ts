@@ -1,12 +1,12 @@
 import * as Phaser from 'phaser';
-
+import Constantes from '../constantes';
 export default class Menu extends Phaser.Scene {
     private width: number;
     private height: number;
     
 
     constructor(){
-        super('Menu');
+        super(Constantes.ESCENAS.MENU);
     }
 
     init(){
@@ -17,10 +17,9 @@ export default class Menu extends Phaser.Scene {
     create(){
         const logo = this.add.image(this.width /2, 70, 'logo1');
 
-        const jugarTxt: Phaser.GameObjects.Text = this.add.text(50, this.height/2, 'JUGAR', {fontSize:'32px', color:'#FFFFFF'})
-        .setInteractive();
+        const jugarTxt: Phaser.GameObjects.Text = this.add.text(50, this.height/2, 'JUGAR', {fontSize:'32px', color:'#FFFFFF'}).setInteractive();
 
-        this.cambiarEscena(jugarTxt, 'Nivel1');
+        this.cambiarEscena(jugarTxt, Constantes.ESCENAS.NIVEL1);
 
     }
     

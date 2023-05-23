@@ -4,7 +4,7 @@ const Constantes = {
         PUNTUACION: 'cambiaPuntuacion'
     },
     MENU:{
-        JUGAR: 'JUGAR'
+        JUGAR: 'Jugar'
     },
     HUD:{
         VIDAS: 'Vidas:'
@@ -24,31 +24,7 @@ const Constantes = {
             TILEMAPJSON: 'mapaNivel1',
             CAPAPLATAFORMAS: 'Plataformas'
         },
-        TILESET:'nivelestileset',
-        POSICIONFINAL: 'posicionfinal'
-    },
-    FONDOS:{
-        NIVEL1: 'Brown'
-    }, 
-    FUENTES:{
-        JSON: 'fuenteJSON',
-        IMAGEN: 'imagenFuente',
-        BITMAP: 'fuentePixel'
-
-    },
-    JUGADOR:{
-        ID: 'jugador',
-        ANIMACION:{
-            ESPERA: 'idle',
-            CORRER: 'run',
-            SALTO: 'jump-0'
-        }
-    }, 
-    OBJETOS:{
-        FINAL: 'final'
-    },
-    BASEDATOS: {
-        NOMBRE: 'SUPERRANINJAv10'
+        TILESET:'nivelestileset'
     }
 };
 export default Constantes;

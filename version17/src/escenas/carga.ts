@@ -33,19 +33,38 @@ export default class Carga extends Phaser.Scene
         );
 
         //Listener cuando se hayan cargado todos los Assets  
-        this.load.on(
-            'complete',
-            function () {
-                this.scene.start('Menu');
+        this.load.on('complete', ()=> {
+                const fuenteJSON = this.cache.json.get(Constantes.FUENTES.JSON);
+                this.cache.bitmapFont.add(Constantes.FUENTES.BITMAP, Phaser.GameObjects.RetroFont.Parse(this, fuenteJSON));
+
+                //carga MENU
+                this.scene.start(Constantes.ESCENAS.MENU);
             },
             this
         );
-
-        //Carga los assets del juego
-        this.load.image('logo1', 'assets/phaser3-logo.png');
         
-        this.load.tilemapTiledJSON(Constantes.MAPAS.NIVEL1.TILEMAPJSON, 'assets/niveles/nivel1.json');
-        this.load.image(Constantes.MAPAS.TILESET,'assets/niveles/nivelestileset.png');
+        //--------------------------------------------------------
+        this.load.path = 'assets/';
+
+        //Carga los assets del juego        
+        this.load.image('logo1', 'phaser3-logo.png');        
+        
+        //Mapas
+        this.load.tilemapTiledJSON(Constantes.MAPAS.NIVEL1.TILEMAPJSON, 'niveles/nivel1.json');
+        this.load.image(Constantes.MAPAS.TILESET, 'niveles/nivelestileset.png');
+
+        //Fondo
+        this.load.image(Constantes.FONDOS.NIVEL1, 'imagenes/fondos/Brown.png');
+
+        //Fuentes                
+        this.load.json(Constantes.FUENTES.JSON, 'fuentes/fuente.json');
+        this.load.image(Constantes.FUENTES.IMAGEN, 'fuentes/imagenFuente.png');
+
+        //Jugador
+        this.load.atlas(Constantes.JUGADOR.ID, 'imagenes/jugador/ninjafrog.png', 'imagenes/jugador/ninjafrog.json');
+
+        //ObjetoFinal
+        this.load.image(Constantes.OBJETOS.FINAL, 'imagenes/objetos/final.png');
     }
 
     /**

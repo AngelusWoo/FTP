@@ -25,7 +25,7 @@ const Constantes = {
             CAPAPLATAFORMAS: 'Plataformas'
         },
         TILESET:'nivelestileset',
-        POSICIONFINAL: 'PosicionFinal'
+        POSICIONFINAL: 'final'
     },
     FONDOS:{
         NIVEL1: 'Brown'
@@ -45,7 +45,7 @@ const Constantes = {
         }
     }, 
     OBJETOS:{
-        FINAL: 'PosicionFinal'
+        FINAL: 'final'
     }
 };
 export default Constantes;

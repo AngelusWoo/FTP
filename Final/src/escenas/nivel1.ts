@@ -9,7 +9,7 @@ export default class Nivel1 extends Phaser.Scene
     private vidas: number;
     private puntuacion: number;
 
-    private mapaNivel : Phaser.Tilemaps.Tilemap;
+    private mapaNivel: Phaser.Tilemaps.Tilemap;
     private conjuntoPatrones: Phaser.Tilemaps.Tileset;
     private capaMapaNivel: Phaser.Tilemaps.TilemapLayer;  
 
@@ -73,8 +73,7 @@ export default class Nivel1 extends Phaser.Scene
                 x:d.x,
                 y:d.y, 
                 textura: Constantes.JUGADOR.ID
-            });
-            return true;            
+            });            
         });        
 
         this.physics.add.collider(this.jugador, this.capaMapaNivel); // Aplica colisiones del jugador y el mapa
@@ -83,7 +82,7 @@ export default class Nivel1 extends Phaser.Scene
         this.conjuntoPatrones = this.mapaNivel.addTilesetImage(Constantes.MAPAS.TILESET);
         
         this.capaMapaNivel = this.mapaNivel.createLayer(Constantes.MAPAS.NIVEL1.CAPAPLATAFORMAS, this.conjuntoPatrones);
-        this.capaMapaNivel.setCollisionByExclusion([-1]); //Añade colisiones al mapa
+        this.capaMapaNivel.setCollisionByExclusion([0]); //Añade colisiones al mapa
         
         
         //Fondo
@@ -93,7 +92,7 @@ export default class Nivel1 extends Phaser.Scene
         this.anims.create({ // Animación de espera
             key: Constantes.JUGADOR.ANIMACION.ESPERA,
             frames:this.anims.generateFrameNames (Constantes.JUGADOR.ID,{prefix: Constantes.JUGADOR.ANIMACION.ESPERA + '-',
-            end:11}),
+            end:10}),
             frameRate: 20,
             repeat: -1
         });
@@ -102,7 +101,7 @@ export default class Nivel1 extends Phaser.Scene
             key: Constantes.JUGADOR.ANIMACION.CORRER, 
             frames: this.anims.generateFrameNames(Constantes.JUGADOR.ID,{
                 prefix:Constantes.JUGADOR.ANIMACION.CORRER + '-',
-                end:12 
+                end:11 
             }), 
             frameRate:20, // frames por segundo
             repeat: -1 //-1 hace que la animación se repita constantemente

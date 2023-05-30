@@ -1,4 +1,4 @@
-import 'phaser';
+import * as Phaser from 'phaser';
 import Constantes from '../constantes';
 import Jugador from '../gameobjects/jugador';
 export default class Nivel1 extends Phaser.Scene

@@ -18,6 +18,7 @@
         "url": "https://github.com/photonstorm/phaser3-typescript-project-template/issues"
     },
     "homepage": "https://github.com/photonstorm/phaser3-typescript-project-template#readme",
+    "dependencies": {},
     "devDependencies": {
         "@rollup/plugin-commonjs": "^24.0.1",
         "@rollup/plugin-node-resolve": "^15.0.2",

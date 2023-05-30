@@ -1,4 +1,4 @@
-import * as Phaser from 'phaser';
+import 'phaser';
 import Constantes from '../constantes';
 import Jugador from '../gameobjects/jugador';
 export default class Nivel1 extends Phaser.Scene
@@ -9,7 +9,7 @@ export default class Nivel1 extends Phaser.Scene
     private vidas: number;
     private puntuacion: number;
 
-    private mapaNivel: Phaser.Tilemaps.Tilemap;
+    private mapaNivel : Phaser.Tilemaps.Tilemap;
     private conjuntoPatrones: Phaser.Tilemaps.Tileset;
     private capaMapaNivel: Phaser.Tilemaps.TilemapLayer;  
 
@@ -74,7 +74,7 @@ export default class Nivel1 extends Phaser.Scene
                 y:d.y, 
                 textura: Constantes.JUGADOR.ID
             });            
-        });        
+        });
 
         this.physics.add.collider(this.jugador, this.capaMapaNivel); // Aplica colisiones del jugador y el mapa
         

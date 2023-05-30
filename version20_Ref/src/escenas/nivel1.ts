@@ -77,7 +77,7 @@ export default class Nivel1 extends Phaser.Scene
         this.conjuntoPatrones = this.mapaNivel.addTilesetImage(Constantes.MAPAS.TILESET);
         
         this.capaMapaNivel = this.mapaNivel.createLayer(Constantes.MAPAS.NIVEL1.CAPAPLATAFORMAS, this.conjuntoPatrones);
-        this.capaMapaNivel.setCollisionByExclusion([-1]);
+        this.capaMapaNivel.setCollisionByExclusion([-1]); //Añade colisiones al mapa
         
         //Fondo
         this.imagenFondo = this.add.tileSprite(0,0,this.mapaNivel.widthInPixels, this.mapaNivel.heightInPixels, Constantes.FONDOS.NIVEL1).setOrigin(0,0).setDepth(-1);
@@ -97,14 +97,14 @@ export default class Nivel1 extends Phaser.Scene
                 prefix:Constantes.JUGADOR.ANIMACION.CORRER + '-',
                 end:11 
             }), 
-            frameRate:20, 
-            repeat: -1
+            frameRate:20, // frames por segundo
+            repeat: -1 //-1 hace que la animación se repita constantemente
         });
 
         //Crear Jugador
         this.jugador = this.physics.add.sprite(80,80, Constantes.JUGADOR.ID).play(Constantes.JUGADOR.ANIMACION.ESPERA, true);
 
-        this.jugador.body.setSize(20,30);
+        //this.jugador.body.setSize(20,30);
 
         this.physics.add.collider(this.jugador, this.capaMapaNivel); 
 

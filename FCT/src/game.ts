@@ -1,12 +1,8 @@
-import * as Phaser from 'phaser';
+import 'phaser';
 import Configuracion from './configuracion';
-
-export class Juego extends Phaser.Game{
-    constructor(configuracion: Phaser.Types.Core.GameConfig){
-        super(configuracion);
-    }
+export class Juego extends Phaser.Game {
+    constructor(configuracion: Phaser.Types.Core.GameConfig) { super(configuracion); }
 }
 
-window.addEventListener('load', ()=>{
-    const juego = new Juego(Configuracion);
-});
+// Carga el juego una vez cargado la página
+window.addEventListener('load', ()=>{  const juego = new Juego(Configuracion); });

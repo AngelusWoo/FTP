@@ -1,28 +1,23 @@
-import * as Phaser from 'phaser';
 import Constantes from '../constantes';
 
 export default class Menu extends Phaser.Scene {
+    // Ancho y alto de la pantalla
     private width: number;
     private height: number;
-    
 
-    constructor(){
-        super(Constantes.ESCENAS.MENU);
-    }
+    constructor() { super(Constantes.ESCENAS.MENU); }
 
-    init(){
+    init() {
         this.width = this.cameras.main.width;
         this.height = this.cameras.main.height;
     }
 
     create(){
-        const logo = this.add.image(this.width /2, 70, 'logo1');
+        const logo = this.add.image(this.width /2, 70, 'logo1'); 
 
-        const jugarTxt: Phaser.GameObjects.BitmapText = this.add.bitmapText(50, this.height/2, Constantes.FUENTES.BITMAP, Constantes.MENU.JUGAR, 25)
-        .setInteractive();
-
-        this.cambiarEscena(jugarTxt, Constantes.ESCENAS.NIVEL1);
-
+        // Añade un texto interactivo
+        const jugarTxt: Phaser.GameObjects.BitmapText = this.add.bitmapText(50, this.height/2, Constantes.FUENTES.BITMAP, Constantes.MENU.JUGAR, 25).setInteractive();
+        this.cambiarEscena(jugarTxt, Constantes.ESCENAS.NIVEL1); // Enlaza el texto interactivo con la funcion cambiarEscena
     }
     
     /**
@@ -37,7 +32,4 @@ export default class Menu extends Phaser.Scene {
             this.scene.bringToTop(Constantes.ESCENAS.HUD);
         });
     }
-
-    
-
 }

@@ -1,26 +1,19 @@
-import * as Phaser from 'phaser';
 import Constantes from '../constantes';
 
-export default class Carga extends Phaser.Scene 
-{
+export default class Carga extends Phaser.Scene {
     //Barras de Carga
     private barraCarga: Phaser.GameObjects.Graphics;
     private barraProgreso: Phaser.GameObjects.Graphics;
 
 
-    constructor () {
-        super(Constantes.ESCENAS.CARGA);
-    }
+    constructor () { super(Constantes.ESCENAS.CARGA); }
 
     preload (): void {
-
-        this.cameras.main.setBackgroundColor(0x000000);
-        this.creaBarras();
+        this.cameras.main.setBackgroundColor(0x000000); // Color de fondo
+        this.creaBarras(); // Crea las barras de carga
         
         //Listener mientras se cargan los assets
-        this.load.on(
-            'progress',
-            function (value: number) {
+        this.load.on('progress', function (value: number) {
               this.barraProgreso.clear();
               this.barraProgreso.fillStyle(0x125555, 1);
               this.barraProgreso.fillRect(
@@ -38,8 +31,7 @@ export default class Carga extends Phaser.Scene
                 const fuenteJSON = this.cache.json.get(Constantes.FUENTES.JSON);
                 this.cache.bitmapFont.add(Constantes.FUENTES.BITMAP, Phaser.GameObjects.RetroFont.Parse(this, fuenteJSON));
 
-                //carga MENU
-                this.scene.start(Constantes.ESCENAS.MENU);
+                this.scene.start(Constantes.ESCENAS.MENU); // Carga MENU
             },
             this
         );
@@ -66,8 +58,6 @@ export default class Carga extends Phaser.Scene
 
         //ObjetoFinal
         this.load.image(Constantes.OBJETOS.FINAL, 'imagenes/objetos/final.png');
-
-
     }
 
     /**
@@ -84,6 +74,4 @@ export default class Carga extends Phaser.Scene
         );
         this.barraProgreso = this.add.graphics();
       }
-
-
 }

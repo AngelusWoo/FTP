@@ -25,7 +25,7 @@ const Constantes = {
             CAPAPLATAFORMAS: 'Plataformas'
         },
         TILESET:'nivelestileset',
-        POSICIONFINAL: 'final'
+        POSICIONFINAL: 'posicionfinal'
     },
     FONDOS:{
         NIVEL1: 'Brown'

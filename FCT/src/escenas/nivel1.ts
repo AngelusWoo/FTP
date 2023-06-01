@@ -1,6 +1,5 @@
 import Constantes from '../constantes';
 import Jugador from '../gameobjects/jugador';
-
 export default class Nivel1 extends Phaser.Scene {
     // Ancho y alto de la pantalla
     private width: number;

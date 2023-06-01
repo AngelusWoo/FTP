@@ -1,5 +1,4 @@
 import Constantes from '../constantes';
-
 export default class Jugador extends Phaser.Physics.Arcade.Sprite {
     //Control de entrada
     private cursores: Phaser.Types.Input.Keyboard.CursorKeys; // Tecla de cursor

@@ -1,5 +1,4 @@
 import Constantes from '../constantes';
-
 export default class Carga extends Phaser.Scene {
     //Barras de Carga
     private barraCarga: Phaser.GameObjects.Graphics;

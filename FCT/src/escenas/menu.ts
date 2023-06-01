@@ -1,5 +1,4 @@
 import Constantes from '../constantes';
-
 export default class Menu extends Phaser.Scene {
     // Ancho y alto de la pantalla
     private width: number;
